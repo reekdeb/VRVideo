@@ -43,13 +43,20 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 352ae743e9f09d64881ece137eecd5db, type: 3}
+    - {fileID: 102900000, guid: 1dad783bb479f2145a2ddc9061565974, type: 3}
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 45a30ee1670fd824ca4c9eb762301538, type: 3}
+  - {fileID: 21300000, guid: cce429c4030c85d409d7f250b2046b49, type: 3}
   - {fileID: 21300000, guid: fecc2ab8aa052974eadfec4795027c5f, type: 3}
+  - {fileID: 21300000, guid: 915986ca51da694458d9b97e839a5173, type: 3}
+  - {fileID: 21300000, guid: 1c1cfc9d0863f454c83b51020739afc9, type: 3}
   m_PackedSpriteNamesToIndex:
   - RoundedSquare
+  - outline_pause_circle_outline_white_48
   - DropShadow
+  - outline_stop_circle_white_48
+  - outline_play_circle_outline_white_48
   m_Tag: SpriteAtlas
   m_IsVariant: 0
