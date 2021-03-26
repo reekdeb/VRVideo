@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Management;
@@ -12,6 +11,12 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        Screen.sleepTimeout = SleepTimeout.SystemSetting;
+        Screen.orientation = ScreenOrientation.AutoRotation;
     }
 
     public void StartVR()
