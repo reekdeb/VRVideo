@@ -3,6 +3,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Management;
 
+/// <summary>
+/// UI Manager.
+/// </summary>
 [RequireComponent(typeof(Animator))]
 public class UIManager : MonoBehaviour
 {
@@ -15,10 +18,14 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
+        // Default setup
         Screen.sleepTimeout = SleepTimeout.SystemSetting;
         Screen.orientation = ScreenOrientation.AutoRotation;
     }
 
+    /// <summary>
+    /// Load and start VR scene with orientation check.
+    /// </summary>
     public void StartVR()
     {
         IEnumerator LoadNextScene()

@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.Video;
 
+/// <summary>
+/// VR UI manager.
+/// </summary>
 public class VRUIManager : MonoBehaviour
 {
     [Header("References")]
@@ -15,6 +18,9 @@ public class VRUIManager : MonoBehaviour
     [SerializeField]
     private Sprite videoPauseSprite;
 
+    /// <summary>
+    /// Toggle video play pause.
+    /// </summary>
     public void PlayPauseToggle()
     {
         if (videoPlayer.isPlaying)

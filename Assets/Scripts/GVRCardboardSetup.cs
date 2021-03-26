@@ -4,10 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.XR.Management;
 
+/// <summary>
+/// Setup Google VR Cardboard settings.
+/// </summary>
 public class GVRCardboardSetup : MonoBehaviour
 {
     private void Start()
     {
+        // Do not sleep
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Screen.brightness = 1.0f;
 
@@ -38,7 +42,10 @@ public class GVRCardboardSetup : MonoBehaviour
         Api.UpdateScreenParams();
     }
 
-    private void CloseVRScene()
+    /// <summary>
+    /// Close VR scene and back to previous scene.
+    /// </summary>
+    public void CloseVRScene()
     {
         IEnumerator LoadPreviousScene()
         {
