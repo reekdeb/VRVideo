@@ -9,10 +9,14 @@ using UnityEngine.XR.Management;
 [RequireComponent(typeof(Animator))]
 public class UIManager : MonoBehaviour
 {
+    [SerializeField]
+    private CanvasGroup buttonsContainer;
+
     private Animator animator;
 
     private void Awake()
     {
+        buttonsContainer.interactable = false;
         animator = GetComponent<Animator>();
     }
 
@@ -21,6 +25,13 @@ public class UIManager : MonoBehaviour
         // Default setup
         Screen.sleepTimeout = SleepTimeout.SystemSetting;
         Screen.orientation = ScreenOrientation.AutoRotation;
+
+        IEnumerator SetInteractable()
+        {
+            yield return new WaitForSecondsRealtime(1);
+            buttonsContainer.interactable = true;
+        }
+        StartCoroutine(SetInteractable());
     }
 
     /// <summary>

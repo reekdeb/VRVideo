@@ -712,6 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b181b2f0c5bc5244ab4b27412aaaecb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonsContainer: {fileID: 8026246901059824980}
 --- !u!1 &4495752695130019394
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,6 +800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4495752695510016184}
   - component: {fileID: 4495752695510016187}
+  - component: {fileID: 8026246901059824980}
   m_Layer: 5
   m_Name: PanelMargin
   m_TagString: Untagged
@@ -834,6 +836,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4495752695510016185}
   m_CullTransparentMesh: 0
+--- !u!225 &8026246901059824980
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4495752695510016185}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4495752695740470242
 GameObject:
   m_ObjectHideFlags: 0
