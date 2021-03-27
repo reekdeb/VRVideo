@@ -8,7 +8,11 @@ using UnityEngine.Events;
 public class VRButtonController : MonoBehaviour
 {
     [SerializeField]
-    private UnityEvent OnClick;
+    private UnityEvent onClick;
+    [SerializeField]
+    private UnityEvent onPointerEnter;
+    [SerializeField]
+    private UnityEvent onPointerExit;
 
     private Animator animator;
     private int onGaze = Animator.StringToHash("OnGaze");
@@ -24,6 +28,7 @@ public class VRButtonController : MonoBehaviour
     public void OnPointerEnter()
     {
         animator.SetBool(onGaze, true);
+        onPointerEnter.Invoke();
     }
 
     /// <summary>
@@ -32,6 +37,7 @@ public class VRButtonController : MonoBehaviour
     public void OnPointerExit()
     {
         animator.SetBool(onGaze, false);
+        onPointerExit.Invoke();
     }
 
     /// <summary>
@@ -39,6 +45,6 @@ public class VRButtonController : MonoBehaviour
     /// </summary>
     public void OnPointerClick()
     {
-        OnClick.Invoke();
+        onClick.Invoke();
     }
 }
